@@ -4,11 +4,9 @@ Exercise 1
 ----------
 
 - Before running the code, discuss the expected order of each loop!
-- Synchronous - Write code that loops through the array of greek gods and prints the
-  index numbers and values to the console, e.g. '0. Aphrodite'
+- Synchronous - Write code that loops through the array of greek gods and prints the index numbers and values to the console, e.g. '0. Aphrodite'
 - Run the code on the command line in node
-- Asynchronous - Same as before but the index and the value of the god at position
-  2 in array should be printed after 2 seconds. Hint: use setTimeout()
+- Asynchronous - Same as before but the index and the value of the god at position 2 in array should be printed after 2 seconds. Hint: use setTimeout()
 - Run the code on the command line in node
 
 */
@@ -21,3 +19,14 @@ const greekGods = [
   "Poseidon",
   "Zeus",
 ];
+
+greekGods.forEach((god, index) => {
+  if (index === 1) {
+    setTimeout(() => console.log(`${index}: ${god}`), "2000");
+  }
+  console.log(`${index}: ${god}`);
+});
+
+setTimeout(() => {
+  console.log(`2: ${greekGods[2]}`);
+}, "3000");

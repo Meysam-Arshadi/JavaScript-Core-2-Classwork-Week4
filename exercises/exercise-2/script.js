@@ -9,3 +9,18 @@ Exercise 2
   Hint: try searching for setInterval.
 
 */
+
+// function changeBG() {
+//   const mainBG = document.getElementById("main");
+//   mainBG.style.backgroundColor = "red";
+// }
+
+// setInterval(changeBG, 1000);
+
+function changeBG() {
+  const randomColor = Math.floor(Math.random() * 12345678).toString(16);
+  document.body.style.backgroundColor = "#" + randomColor;
+  color.innerHTML = "#" + randomColor;
+}
+
+setInterval(changeBG, 5000);
