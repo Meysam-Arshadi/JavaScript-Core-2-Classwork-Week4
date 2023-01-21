@@ -48,8 +48,15 @@ Create a function called "showMovies" that
 
 function showMovies() {
   // add code here
+  const newDiv = document.getElementById("allMovies");
+  movies.forEach((movie) => {
+    const newP = document.createElement("p");
+    newP.innerText = `${movie.title} ${movie.director}`;
+    newDiv.appendChild(newP);
+  });
 }
 
+showMovies();
 
 /*
 
@@ -64,7 +71,7 @@ How many movies can you see on your page?
 
 const myFavMovie = {
   // add code here
-}
+};
 
 function addMovie(movie, callback) {
   // add code here
@@ -77,8 +84,6 @@ Can you change the addMovie function to make sure the new movie you just added i
 Hint: use callbacks
 
 */
-
-
 
 /*
 
